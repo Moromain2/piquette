@@ -7,8 +7,9 @@ const ProductsIndex = ({ products }) => {
             {products.data.map(product => (
                 <div className="product-card" key={product.id}>
                     <Image
-                        src={`http://localhost:1337${product.attributes.images.data[0].attributes.url}`}
+                        src={product.attributes.images.data[0].attributes.url}
                         alt={product.attributes.name + product.attributes.flavour}
+                        priority={true}
                         width={500}
                         height={500}
                     />

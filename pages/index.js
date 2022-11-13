@@ -13,8 +13,9 @@ export default function Home({ heroContent, ctaContent, section1Content, section
         <h1 className="section-title">{hero.section_title}</h1>
         <p>{hero.section_text}</p>
         <Image
-            src={`http://localhost:1337${hero.section_image.data.attributes.url}`}
+            src={hero.section_image.data.attributes.url}
             alt={`Piquette`}
+            priority={true}
             width={620}
             height={560}
         />
@@ -23,7 +24,7 @@ export default function Home({ heroContent, ctaContent, section1Content, section
         <h1 className="section-title">{section1.section_title}</h1>
         <p>{section1.section_text}</p>
         <Image
-            src={`http://localhost:1337${section1.section_image.data.attributes.url}`}
+            src={section1.section_image.data.attributes.url}
             alt={`Piquette`}
             width={560}
             height={140}
